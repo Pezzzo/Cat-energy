@@ -1,0 +1,110 @@
+.additionally-form {
+  min-height: 200px;
+  grid-column: 1/-1;
+  padding-bottom: 42px;
+
+  @media (min-width: $tablet) {
+    @include font-setting(20px, 30px);
+
+    padding-bottom: 22px;
+  }
+
+  @media (min-width: $desktop) {
+    min-height: 194px;
+    padding-bottom: 0;
+  }
+
+  &__subtitle {
+    text-transform: none;
+    padding-bottom: 34px;
+
+    @include font-setting(24px, 26px);
+
+    @media (min-width: $tablet) {
+      @include font-setting(36px, 36px);
+
+      padding-bottom: 56px;
+    }
+  }
+}
+
+.additionally-form__list {
+  padding-left: 66px;
+  padding-top: 4px;
+
+  @media (min-width: $tablet) {
+    padding-left: 130px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 120px;
+  }
+
+  @media (min-width: $desktop) {
+    padding-left: 170px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    column-gap: 140px;
+    padding-top: 6px;
+  }
+}
+
+.additionally-form__field {
+  position: relative;
+}
+
+.additionally-form__item:not(:last-child) {
+  margin-bottom: 24px;
+
+  @media (min-width: $tablet) {
+    margin-bottom: 40px;
+  }
+}
+
+.additionally-form__field input {
+  display: none;
+}
+
+.additionally-form__input + span::before {
+  content: "";
+  position: absolute;
+  top: -2px;
+  width: 30px;
+  height: 30px;
+  left: -46px;
+  border: 1px solid $grey4;
+
+  @media (min-width: $tablet) {
+    top: -4px;
+    width: 40px;
+    height: 40px;
+    left: -60px;
+  }
+}
+
+.additionally-form__input:hover + span::before {
+  border-color: $grey10;
+}
+
+.additionally-form__input:checked + span::after {
+  content: "";
+  position: absolute;
+  top: -2px;
+  width: 30px;
+  height: 30px;
+  left: -46px;
+  background: url("../img/checkbox-checked.svg") 50% 50% no-repeat;
+
+  @media (min-width: $tablet) {
+    top: -4px;
+    width: 40px;
+    height: 40px;
+    left: -60px;
+    background: url("../img/checkbox-checked.svg") 50% 50% no-repeat;
+  }
+}
+
+.additionally-form__input:disabled + span::before,
+.additionally-form__input:checked:disabled + span::after {
+  opacity: $opacity30;
+}
+

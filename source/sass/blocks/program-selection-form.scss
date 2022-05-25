@@ -1,0 +1,38 @@
+.program-selection-form {
+  line-height: 18px;
+  display: grid;
+  grid-template-columns: 1fr;
+
+  @media (min-width: $tablet) {
+    @include font-setting(20px, 24px);
+  }
+
+  @media (min-width: $desktop) {
+    width: 1440px;
+    grid-template-columns: 720px 720px;
+  }
+
+  & input::placeholder {
+    padding-left: 14px;
+  }
+}
+
+.personal-data-form__input {
+  &:hover {
+    border: 1px solid $grey4;
+  }
+
+  &:focus {
+    border: 2px solid $dark-grey;
+    outline: none;
+  }
+}
+
+.program-selection-form fieldset {
+  margin: 0;
+}
+
+.program-selection-form__element {
+  border: none;
+  padding: 0;
+}

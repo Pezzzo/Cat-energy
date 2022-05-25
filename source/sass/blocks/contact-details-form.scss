@@ -1,0 +1,263 @@
+.contact-details-form {
+  min-height: 200px;
+  grid-column: 1/-1;
+  padding-bottom: 24px;
+
+  @media (min-width: $tablet) {
+    padding-bottom: 68px;
+  }
+
+  @media (min-width: $desktop) {
+    grid-column: 1/-1;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding-bottom: 42px;
+  }
+
+  &__data {
+    color: $dark-grey;
+
+    @include padding-y(13px, 13px);
+    padding-right: 12px;
+
+    @media (min-width: $tablet) {
+      padding-right: 20px;
+    }
+  }
+
+  &__input::placeholder {
+    color: $dark-grey;
+    text-transform: uppercase;
+  }
+
+  &__input {
+    padding: 0;
+
+    @media (min-width: $tablet) {
+      padding-left: 2px;
+    }
+
+    @media (min-width: $desktop) {
+      height: 52px;
+    }
+  }
+
+  &__icon-mail {
+    fill: $basik-white;
+    stroke: $dark-grey-2;
+    position: absolute;
+    right: 36px;
+    top: 18px;
+
+    @media (min-width: $tablet) {
+      right: 84px;
+      top: 20px;
+    }
+
+    @media (min-width: $desktop) {
+      right: 60px;
+      top: 18px;
+    }
+  }
+
+  &__icon-phone {
+    fill: $basik-black;
+    position: absolute;
+    right: 32px;
+    top: 12px;
+
+    @media (min-width: $tablet) {
+      right: 82px;
+      top: 16px;
+    }
+
+    @media (min-width: $desktop) {
+      right: 126px;
+      top: 15px;
+    }
+  }
+}
+
+.contact-details-form__field {
+  display: flex;
+  width: 100%;
+
+  &--mail {
+    position: relative;
+
+    @media (min-width: $desktop) {
+      padding-right: 40px;
+    }
+  }
+
+  &--phone {
+    position: relative;
+
+    @media (min-width: $desktop) {
+      padding-left: 40px;
+    }
+  }
+}
+
+.contact-details-form__field:focus-within > .contact-details-form__icon-mail {
+  stroke: $green;
+}
+
+.contact-details-form__field:focus-within > .contact-details-form__icon-phone {
+  fill: $green;
+}
+
+.contact-details-form__field span {
+  white-space: nowrap;
+}
+
+.contact-details-form__field input {
+  width: 100%;
+}
+
+.contact-details-form__field:not(:last-child) {
+  margin-bottom: 16px;
+
+  @media (min-width: $tablet) {
+    margin-bottom: 24px;
+  }
+}
+
+.contact-details-form__subtitle {
+  text-transform: none;
+
+  @include padding-y(26px, 35px);
+  @include font-setting(24px, 26px);
+
+  @media (min-width: $tablet) {
+    @include font-setting(36px, 36px);
+
+    padding-bottom: 72px;
+  }
+
+  @media (min-width: $desktop) {
+    padding-top: 20px;
+    grid-column: 1/-1;
+    width: 100%;
+    padding-bottom: 76px;
+  }
+}
+
+.subtitle-with-line {
+  max-width: 600px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-left: 20px;
+
+  @media (min-width: $tablet) {
+    max-width: 860px;
+    padding-left: 0;
+  }
+
+  @media (min-width: $desktop) {
+    max-width: 1440px;
+  }
+
+  &::before {
+    content: " ";
+
+    @media (min-width: $tablet) {
+      width: 30px;
+      height: 2px;
+      background-color: $green;
+      margin-right: 40px;
+      margin-top: 4px;
+    }
+
+    @media (min-width: $desktop) {
+      width: 70px;
+      margin-top: 6px;
+    }
+  }
+
+  &::after {
+    content: " ";
+    flex-grow: 1;
+    flex-shrink: 0;
+    height: 2px;
+    background-color: $green;
+    margin-left: 16px;
+    margin-bottom: 16px;
+
+    @media (min-width: $tablet) {
+      margin-left: 42px;
+      margin-bottom: 0;
+      margin-top: 8px;
+    }
+
+    @media (min-width: $desktop) {
+      margin-top: 6px;
+    }
+  }
+
+  &--wrapper {
+    display: flex;
+    flex-direction: column;
+
+    @media (min-width: $tablet) {
+      flex-direction: row;
+    }
+  }
+}
+
+.subtitle-with-line-2 {
+  max-width: 600px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-left: 20px;
+
+  @media (min-width: $tablet) {
+    max-width: 860px;
+    padding-left: 0;
+  }
+
+  @media (min-width: $desktop) {
+    max-width: 1440px;
+  }
+
+  &::before {
+    content: " ";
+
+    @media (min-width: $tablet) {
+      width: 30px;
+      height: 2px;
+      background-color: $green;
+      margin-right: 40px;
+      margin-top: 6px;
+    }
+
+    @media (min-width: $desktop) {
+      width: 70px;
+      margin-top: 10px;
+    }
+  }
+
+  &::after {
+    content: " ";
+    flex-grow: 1;
+    flex-shrink: 0;
+    height: 2px;
+    background-color: $green;
+    margin-left: 22px;
+    margin-top: 6px;
+
+    @media (min-width: $tablet) {
+      margin-left: 42px;
+      margin-bottom: 0;
+      margin-top: 10px;
+    }
+
+    @media (min-width: $desktop) {
+      margin-top: 12px;
+    }
+  }
+}

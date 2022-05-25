@@ -1,0 +1,77 @@
+.map-content {
+  position: relative;
+
+  &__subtitle {
+    line-height: 20px;
+    font-size: 16px;
+    color: $black2;
+    font-weight: $font-regular;
+    min-width: 140px;
+
+    @media (min-width: $tablet) {
+      @include font-setting(20px, 25px);
+      margin-top: 24px;
+    }
+
+    @media (min-width: $desktop) {
+      margin-top: 18px;
+    }
+  }
+
+  &__text {
+    font-family: $Arial;
+    min-width: 140px;
+
+    @include font-setting(14px, 20px);
+    color: $dark-grey;
+
+    @media (min-width: $tablet) {
+      padding-right: 2px;
+      padding-top: 6px;
+      text-align: end;
+      font-size: 16px;
+      width: 160px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    @media (min-width: $desktop) {
+      margin-top: 0;
+      text-align: start;
+    }
+  }
+
+  &__text-addres {
+    margin-bottom: 20px;
+  }
+}
+
+.map-content__contact-address {
+  min-height: 114px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  @media (max-width: 280px) {
+    flex-wrap: wrap;
+  }
+
+  @media (min-width: $tablet) {
+    min-height: 200px;
+    max-width: 900px;
+  }
+
+  @media (min-width: $desktop) {
+    padding-left: 76px;
+    padding-right: 86px;
+  }
+
+  @media (min-width: $desktop) {
+    position: absolute;
+    width: 570px;
+    height: 200px;
+    left: 110px;
+    top: 100px;
+    background-color: $basik-white;
+  }
+}

@@ -1,0 +1,25 @@
+.section-example {
+  margin: 0 auto;
+  background-color: $grey3;
+
+  @media (min-width: $tablet) {
+    background-color: $basik-white;
+    min-height: auto;
+    border-top: 1px solid $grey6;
+  }
+
+  @media (min-width: $desktop) {
+    background-color: $grey;
+    min-height: 460px;
+    border: none;
+    padding-bottom: 2px;
+  }
+}
+
+.example-wrapper {
+  @media (min-width: $desktop) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background-color: $grey;
+  }
+}

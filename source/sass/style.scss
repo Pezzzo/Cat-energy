@@ -1,0 +1,38 @@
+// Global/normalise
+@import "global/normalise.scss";
+// Global/variables
+@import "global/variables.scss";
+// Global/colors
+@import "global/colors.scss";
+//Global
+@import "global/mixins.scss";
+@import "global/global.scss";
+@import "global/buttons.scss";
+@import "global/fonts.scss";
+@import "global/nouislider.scss";
+// Blocks
+@import "blocks/page-header.scss";
+@import "blocks/section-promo.scss";
+@import "blocks/promo.scss";
+@import "blocks/section-map.scss";
+@import "blocks/map-content.scss";
+@import "blocks/map.scss";
+@import "blocks/page-footer.scss";
+// index blocks
+@import "blocks/features.scss";
+@import "blocks/section-example.scss";
+@import "blocks/example.scss";
+@import "blocks/example-slider.scss";
+// form blocks
+@import "blocks/section-form.scss";
+@import "blocks/program-selection-form.scss";
+@import "blocks/personal-data-form.scss";
+@import "blocks/program-objective-form.scss";
+@import "blocks/contact-details-form.scss";
+@import "blocks/comment-form.scss";
+@import "blocks/additionally-form.scss";
+@import "blocks/submission-form.scss";
+// catalog blocks
+@import "blocks/catalog.scss";
+@import "blocks/additional-products.scss";
+// Начните писать стили здесь
