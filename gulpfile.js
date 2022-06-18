@@ -14,6 +14,7 @@ const svgstore = require("gulp-svgstore");
 const del = require("del");
 const sync = require("browser-sync").create();
 
+
 // Styles
 
 const styles = () => {
